@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS CUSTOM PROPERTIES ─────────────────────────────────────────────────
+   Fonts are loaded via <link> in index.html — do NOT @import here.
+   ──────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Nordic / Shared palette ── */
+  --void: #050608;
+  --stone-dark: #0d0e12;
+  --stone: #141720;
+  --stone-mid: #1e2230;
+  --stone-light: #252a38;
+  --frost: #c8dff0;
+  --frost-dim: #8aafc8;
+  --frost-pale: #e8f4ff;
+  --ice: #a8c8e8;
+  --aurora-teal: #2dd4bf;
+  --aurora-blue: #38bdf8;
+  --aurora-purple: #818cf8;
+  --blood: #a01020;
+  --silver: #b0bec8;
+  --silver-bright: #d8e8f0;
+  --rune-glow: rgba(56, 189, 248, 0.6);
+  --border-frost: rgba(168, 200, 232, 0.25);
+  --border-ice: rgba(200, 223, 240, 0.4);
+
+  /* ── Oblivion-only palette (kept so shared components compile) ── */
+  --parchment: #f2e8d5;
+  --parchment-dark: #e0d0b0;
+  --parchment-deep: #c9b78a;
+  --ink: #1a1208;
+  --ink-faded: #3d2e14;
+  --gold: #b8860b;
+  --gold-bright: #d4a017;
+  --gold-pale: #e8cc7a;
+  --red-wax: #8b1a1a;
+  --aged-brown: #6b4c1e;
+  --border-gold: #9a7a2e;
+}
+
+/* ─── GLOBAL BASE ─────────────────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+/* ─── SCROLL SNAP ─────────────────────────────────────────────────────────── */
+
+section[id] {
+  scroll-snap-align: start;
+  /* Offset snap point below the fixed nav (~80px tall) */
+  scroll-margin-top: 80px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--void);
+  color: var(--frost);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── SCROLL REVEAL ───────────────────────────────────────────────────────── */
+/* Fallback for non-Framer contexts. RevealWrapper uses Framer Motion.         */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ─── FROST RULE DIVIDER ──────────────────────────────────────────────────── */
+
+.frost-rule {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-ice),
+    transparent
+  );
+  margin: 0;
+}
+
+.frost-rule::before {
+  content: attr(data-rune);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--void);
+  padding: 0 14px;
+  color: rgba(168, 200, 232, 0.3);
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ─── SKILL BAR TRACK ─────────────────────────────────────────────────────── */
+
+.skill-track [data-radix-progress-indicator] {
+  background: linear-gradient(
+    to right,
+    var(--aurora-blue),
+    var(--aurora-teal)
+  );
+  box-shadow: 0 0 8px var(--rune-glow);
+  height: 100%;
+  transition: width 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
