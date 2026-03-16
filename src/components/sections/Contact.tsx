@@ -50,6 +50,7 @@ export default function Contact() {
               <a
                 key={link.label}
                 href={link.href}
+                {...(link.download ? { download: link.download } : {})}
                 className="
                   inline-flex items-center gap-2
                   font-cinzel text-[9px] tracking-[2px] uppercase

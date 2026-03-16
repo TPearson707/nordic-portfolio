@@ -156,9 +156,9 @@ export interface InfoItem {
 
 export const infoItems: InfoItem[] = [
   { icon: '🏛', label: 'University',      value: 'Salisbury University, Maryland' },
-  { icon: '🎓', label: 'Graduating',      value: 'Spring 2025' },
+  { icon: '🎓', label: 'Graduating',      value: 'Spring 2026' },
   { icon: '📍', label: 'Location',        value: 'Eastern Shore, Maryland' },
-  { icon: '🔭', label: 'Seeking',         value: 'NASA Internship 2025' },
+  { icon: '🔭', label: 'Seeking',         value: 'NASA Internship Summer 2026' },
   { icon: '🎮', label: 'Long-term Goal',  value: 'AAA / Indie Game Development' },
 ]
 
@@ -176,7 +176,7 @@ export interface ExperienceEntry {
 
 export const experience: ExperienceEntry[] = [
   {
-    period: '2023 – Present',
+    period: 'Summer 2025 – Present',
     title: 'Full-Stack Developer',
     org: 'Delmarva Digital',
     location: 'Laurel, DE',
@@ -185,7 +185,7 @@ export const experience: ExperienceEntry[] = [
     tags: ['Angular', 'TypeScript', 'ColdFusion', 'MariaDB', 'JWT', 'Stripe', 'PrimeNG'],
   },
   {
-    period: 'Summer 2025',
+    period: 'Summer 2026',
     title: 'Software Engineering Intern',
     org: 'NASA Wallops Flight Facility',
     location: 'Virginia',
@@ -195,7 +195,7 @@ export const experience: ExperienceEntry[] = [
     badge: 'Candidate',
   },
   {
-    period: '2021 – 2025',
+    period: '2022 – Present',
     title: 'B.S. Computer Science',
     org: 'Salisbury University',
     location: 'Salisbury, Maryland',
@@ -204,7 +204,7 @@ export const experience: ExperienceEntry[] = [
     tags: ['Computer Science', 'Algorithms', 'Systems Design', 'Statistics'],
   },
   {
-    period: '2024',
+    period: '2026',
     title: 'Unity Junior Programmer Certification',
     org: 'Unity Learn Pathways',
     description:
@@ -219,10 +219,10 @@ export const contact = {
   heading: 'Open to Opportunities',
   sub: "Whether you're looking for a full-stack developer, a collaborator on a game project, or just want to connect — my inbox is open.",
   links: [
-    { icon: '✉', label: 'Email Me',  href: 'mailto:your@email.com' },
-    { icon: '⌥', label: 'GitHub',    href: 'https://github.com/username' },
-    { icon: '🔗', label: 'LinkedIn',  href: 'https://linkedin.com/in/username' },
-    { icon: '📄', label: 'Résumé',    href: '#' },
+    { icon: '✉', label: 'Email Me',  href: 'mailto:pearson.e.thomas@gmail.com' },
+    { icon: '⌥', label: 'GitHub',    href: 'https://github.com/TPearson707' },
+    { icon: '🔗', label: 'LinkedIn',  href: 'https://www.linkedin.com/in/thomas-pearson-b85ab122b/' },
+    { icon: '📄', label: 'Résumé',    href: '/resume.pdf', download: 'Thomas_Pearson_Resume.pdf' },
   ],
   runes: 'ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ ᚷ ᚹ ᚺ ᚾ ᛁ ᛃ ᛇ ᛈ ᛉ',
 }

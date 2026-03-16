@@ -71,7 +71,7 @@ export default function Nav() {
 
       {/* CTA */}
       <a
-        href="mailto:your@email.com"
+        href="mailto:pearson.e.thomas@gmail.com"
         className="
           font-cinzel text-[11px] tracking-[2px] uppercase
           px-5 py-2.5
